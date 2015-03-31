@@ -1,5 +1,6 @@
 #pragma once
 #include "cocos2d.h"
+#include <string.h>
 
 using namespace cocos2d;
 using namespace std;
@@ -17,8 +18,16 @@ class AtlasLoader{
 public:
 	static AtlasLoader* getInstance();
 	static void destroyInstance();
+
 	void loadAtlas(string filename);
 	void loadAtlas(string filename, Texture2D *texture);
 
 	SpriteFrame* getSpriteFrameByName(string name);
+protected:
+	AtlasLoader();
+
+	virtual bool init();
+
+	static AtlasLoader* sharedAtlasLoader;
+	Map<string, SpriteFrame*> _spriteFrames;
 };
