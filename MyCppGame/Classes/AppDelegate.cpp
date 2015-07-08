@@ -3,6 +3,8 @@
 
 USING_NS_CC;
 
+//你这个sb好好编程
+
 AppDelegate::AppDelegate() {
 
 }
@@ -65,3 +67,4 @@ void AppDelegate::applicationWillEnterForeground() {
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
+//just use to check the github
